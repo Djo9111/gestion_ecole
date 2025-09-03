@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_bulletin_de_notes">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2 style="text-align: center;">Bulletin de Notes</h2>
+                            <h3 style="text-align: center;">Annee Scolaire 2024-2025</h3>
+                            <br/>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><strong>Nom de l'etudiant:</strong> <span t-field="doc.name"/></p>
+                                    <p><strong>Classe:</strong> <span t-field="doc.classe_id.name"/></p>
+                                </div>
+                                <div class="col-6">
+                                    <p><strong>Date de naissance:</strong> <span t-field="doc.date_naissance"/></p>
+                                    <p><strong>Moyenne Generale:</strong> <span t-field="doc.moyenne_generale"/></p>
+                                </div>
+                            </div>
+                            
+                            <hr/>
+                            
+                            <h4>Detail des notes par matiere:</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Matiere</th>
+                                        <th>Coefficient</th>
+                                        <th>Note</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="sorted_notes" t-value="doc.note_ids.sorted(key=lambda n: (n.matiere_id.name, n.date_evaluation), reverse=True)"/>
+                                    <tr t-foreach="sorted_notes" t-as="note">
+                                        <td><span t-field="note.matiere_id.name"/></td>
+                                        <td><span t-field="note.matiere_id.coefficient"/></td>
+                                        <td><span t-field="note.valeur_note"/></td>
+                                        <td><span t-field="note.date_evaluation"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

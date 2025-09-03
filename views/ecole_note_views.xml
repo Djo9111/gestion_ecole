@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ecole_note_tree_view" model="ir.ui.view">
+            <field name="name">ecole.note.tree</field>
+            <field name="model">ecole.note</field>
+            <field name="arch" type="xml">
+                <tree string="Notes">
+                    <field name="etudiant_id"/>
+                    <field name="matiere_id"/>
+                    <field name="valeur_note"/>
+                    <field name="date_evaluation"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_note_form_view" model="ir.ui.view">
+            <field name="name">ecole.note.form</field>
+            <field name="model">ecole.note</field>
+            <field name="arch" type="xml">
+                <form string="Fiche Note">
+                    <sheet>
+                        <group>
+                            <field name="etudiant_id"/>
+                            <field name="matiere_id"/>
+                            <field name="valeur_note"/>
+                            <field name="date_evaluation"/>
+                            <field name="commentaires"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_note_pivot_view" model="ir.ui.view">
+            <field name="name">ecole.note.pivot</field>
+            <field name="model">ecole.note</field>
+            <field name="arch" type="xml">
+                <pivot string="Analyse des Notes" display_quantity="true">
+                    <field name="classe_id" type="row"/>
+                    <field name="etudiant_id" type="row"/>
+                    <field name="matiere_id" type="col"/>
+                    <field name="moyenne_pour_pivot" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="ecole_note_graph_view" model="ir.ui.view">
+            <field name="name">ecole.note.graph</field>
+            <field name="model">ecole.note</field>
+            <field name="arch" type="xml">
+                <graph string="Notes">
+                    <field name="etudiant_id"/>
+                    <field name="moyenne_pour_pivot" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="ecole_note_action" model="ir.actions.act_window">
+            <field name="name">Notes</field>
+            <field name="res_model">ecole.note</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_bulletin_de_notes" model="ir.actions.report">
+            <field name="name">Bulletin de Notes</field>
+            <field name="model">ecole.etudiant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ecole_gestion.report_bulletin_de_notes</field>
+            <field name="report_file">ecole_gestion.report_bulletin_de_notes</field>
+            <field name="print_report_name">'Bulletin de notes - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_ecole_etudiant"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ecole_professeur_tree_view" model="ir.ui.view">
+            <field name="name">ecole.professeur.tree</field>
+            <field name="model">ecole.professeur</field>
+            <field name="arch" type="xml">
+                <tree string="Professeurs">
+                    <field name="name"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_professeur_form_view" model="ir.ui.view">
+            <field name="name">ecole.professeur.form</field>
+            <field name="model">ecole.professeur</field>
+            <field name="arch" type="xml">
+                <form string="Fiche Professeur">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="matiere_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_professeur_action" model="ir.actions.act_window">
+            <field name="name">Professeurs</field>
+            <field name="res_model">ecole.professeur</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

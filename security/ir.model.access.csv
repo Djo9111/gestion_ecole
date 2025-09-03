@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ecole_etudiant_user,ecole.etudiant.user,model_ecole_etudiant,base.group_user,1,1,1,1
+access_ecole_professeur_user,ecole.professeur.user,model_ecole_professeur,base.group_user,1,1,1,1
+access_ecole_classe_user,ecole.classe.user,model_ecole_classe,base.group_user,1,1,1,1
+access_ecole_matiere_user,ecole.matiere.user,model_ecole_matiere,base.group_user,1,1,1,1
+access_ecole_note_user,ecole.note.user,model_ecole_note,base.group_user,1,1,1,1

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ecole_etudiant_tree_view" model="ir.ui.view">
+            <field name="name">ecole.etudiant.tree</field>
+            <field name="model">ecole.etudiant</field>
+            <field name="arch" type="xml">
+                <tree string="Etudiants">
+                    <field name="name"/>
+                    <field name="classe_id"/>
+                    <field name="date_naissance"/>
+                    <field name="moyenne_generale"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_etudiant_form_view" model="ir.ui.view">
+            <field name="name">ecole.etudiant.form</field>
+            <field name="model">ecole.etudiant</field>
+            <field name="arch" type="xml">
+                <form string="Fiche Etudiant">
+                    <header>
+                        <button name="%(action_report_bulletin_de_notes)d"
+                                string="Imprimer le bulletin"
+                                type="action"
+                                class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="date_naissance"/>
+                            <field name="classe_id"/>
+                            <field name="adresse"/>
+                            <field name="email"/>
+                            <field name="moyenne_generale"/>
+                        </group>
+                        <notebook>
+                            <page string="Notes">
+                                <field name="note_ids" default_order="matiere_id, date_evaluation desc">
+                                    <tree editable="bottom">
+                                        <field name="matiere_id"/>
+                                        <field name="valeur_note"/>
+                                        <field name="date_evaluation"/>
+                                        <field name="commentaires"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_etudiant_action" model="ir.actions.act_window">
+            <field name="name">Etudiants</field>
+            <field name="res_model">ecole.etudiant</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

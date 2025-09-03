@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ecole_matiere_tree_view" model="ir.ui.view">
+            <field name="name">ecole.matiere.tree</field>
+            <field name="model">ecole.matiere</field>
+            <field name="arch" type="xml">
+                <tree string="Matieres">
+                    <field name="name"/>
+                    <field name="professeur_ids"/>
+                    <field name="coefficient"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_matiere_form_view" model="ir.ui.view">
+            <field name="name">ecole.matiere.form</field>
+            <field name="model">ecole.matiere</field>
+            <field name="arch" type="xml">
+                <form string="Fiche Matiere">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="professeur_ids" widget="many2many_tags"/>
+                            <field name="coefficient"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_matiere_action" model="ir.actions.act_window">
+            <field name="name">Matieres</field>
+            <field name="res_model">ecole.matiere</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

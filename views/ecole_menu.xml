@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="ecole_menu_root" name="Gestion Ecole" sequence="10"/>
+
+        <menuitem id="ecole_etudiant_menu" name="Etudiants" parent="ecole_menu_root" action="ecole_etudiant_action"/>
+
+        <menuitem id="ecole_professeur_menu" name="Professeurs" parent="ecole_menu_root" action="ecole_professeur_action"/>
+
+        <menuitem id="ecole_matiere_menu" name="Matieres" parent="ecole_menu_root" action="ecole_matiere_action"/>
+
+        <menuitem id="ecole_classe_menu" name="Classes" parent="ecole_menu_root" action="ecole_classe_action"/>
+
+        <menuitem id="ecole_notes_menu_root" name="Notes" parent="ecole_menu_root" sequence="20"/>
+        <menuitem id="ecole_notes_dashboard_menu" name="Analyse des Notes" parent="ecole_notes_menu_root" action="ecole_note_action" sequence="10"/>
+    </data>
+</odoo>
