@@ -5,3 +5,5 @@ access_ecole_classe_user,ecole.classe.user,model_ecole_classe,base.group_user,1,
 access_ecole_matiere_user,ecole.matiere.user,model_ecole_matiere,base.group_user,1,1,1,1
 access_ecole_note_user,ecole.note.user,model_ecole_note,base.group_user,1,1,1,1
 access_ecole_presence_user,ecole.presence.user,model_ecole_presence,base.group_user,1,1,1,1
+access_ecole_horaire_user,ecole.horaire.user,model_ecole_horaire,base.group_user,1,1,1,1
+access_ecole_emploi_du_temps_user,ecole.emploi_du_temps.user,model_ecole_emploi_du_temps,base.group_user,1,1,1,1

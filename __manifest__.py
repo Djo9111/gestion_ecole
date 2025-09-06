@@ -18,6 +18,8 @@
         'views/ecole_professeur_views.xml',
         'views/ecole_note_views.xml',
 		'views/ecole_presence_views.xml',
+        'views/ecole_horaire_views.xml',
+		'views/ecole_emploi_du_temps_views.xml',
         # D'abord les modèles de rapport (template et action)
         'reports/bulletin_de_notes_template.xml', 
         'reports/reports.xml',

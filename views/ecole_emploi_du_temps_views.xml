@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ecole_emploi_du_temps_form_view" model="ir.ui.view">
+            <field name="name">ecole.emploi_du_temps.form</field>
+            <field name="model">ecole.emploi_du_temps</field>
+            <field name="arch" type="xml">
+                <form string="Emploi du Temps">
+                    <sheet>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="classe_id"/>
+                            <field name="matiere_id"/>
+                            <field name="professeur_id"/>
+                            <field name="horaire_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_emploi_du_temps_tree_view" model="ir.ui.view">
+            <field name="name">ecole.emploi_du_temps.tree</field>
+            <field name="model">ecole.emploi_du_temps</field>
+            <field name="arch" type="xml">
+                <tree string="Emploi du Temps">
+                    <field name="name"/>
+                    <field name="classe_id"/>
+                    <field name="matiere_id"/>
+                    <field name="professeur_id"/>
+                    <field name="horaire_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_emploi_du_temps_action" model="ir.actions.act_window">
+            <field name="name">Emploi du Temps</field>
+            <field name="res_model">ecole.emploi_du_temps</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

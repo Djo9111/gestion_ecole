@@ -13,5 +13,9 @@
 
         <menuitem id="ecole_notes_menu_root" name="Notes" parent="ecole_menu_root" sequence="20"/>
         <menuitem id="ecole_notes_dashboard_menu" name="Analyse des Notes" parent="ecole_notes_menu_root" action="ecole_note_action" sequence="10"/>
+
+        <menuitem id="ecole_planning_menu_root" name="Planning" parent="ecole_menu_root" sequence="30"/>
+        <menuitem id="ecole_horaire_menu" name="Creneaux Horaires" parent="ecole_planning_menu_root" action="ecole_horaire_action" sequence="10"/>
+        <menuitem id="ecole_emploi_du_temps_menu" name="Emploi du Temps" parent="ecole_planning_menu_root" action="ecole_emploi_du_temps_action" sequence="20"/>
     </data>
 </odoo>
