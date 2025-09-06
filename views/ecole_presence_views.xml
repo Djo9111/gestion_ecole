@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ecole_presence_form_view" model="ir.ui.view">
+            <field name="name">ecole.presence.form</field>
+            <field name="model">ecole.presence</field>
+            <field name="arch" type="xml">
+                <form string="Registre de Presence">
+                    <sheet>
+                        <group>
+                            <field name="etudiant_id"/>
+                            <field name="date_presence"/>
+                            <field name="statut_presence"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ecole_presence_tree_view" model="ir.ui.view">
+            <field name="name">ecole.presence.tree</field>
+            <field name="model">ecole.presence</field>
+            <field name="arch" type="xml">
+                <tree string="Presences">
+                    <field name="etudiant_id"/>
+                    <field name="date_presence"/>
+                    <field name="statut_presence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ecole_presence_action" model="ir.actions.act_window">
+            <field name="name">Presences</field>
+            <field name="res_model">ecole.presence</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="ecole_presence_menu"
+                  name="Presences"
+                  action="ecole_presence_action"
+                  parent="ecole_etudiant_menu"
+                  sequence="20"/>
+
+    </data>
+</odoo>

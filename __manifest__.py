@@ -17,9 +17,12 @@
         'views/ecole_matiere_views.xml',
         'views/ecole_professeur_views.xml',
         'views/ecole_note_views.xml',
+		'views/ecole_presence_views.xml',
         # D'abord les modèles de rapport (template et action)
         'reports/bulletin_de_notes_template.xml', 
-        'reports/reports.xml', 
+        'reports/reports.xml',
+        'reports/rapport_assiduite.xml',
+        'reports/rapport_assiduite_template.xml',  
         # Ensuite les vues qui font référence aux actions de rapport
         'views/ecole_etudiant_views.xml',
         'views/ecole_menu.xml',

@@ -25,6 +25,11 @@
                                 string="Imprimer le bulletin"
                                 type="action"
                                 class="btn-primary"/>
+                                
+                        <button name="%(action_report_assiduite)d"
+                        string="Rapport d'Assiduité"
+                        type="action"
+                        class="btn-primary"/>        
                     </header>
                     <sheet>
                         <group>
@@ -43,6 +48,14 @@
                                         <field name="valeur_note"/>
                                         <field name="date_evaluation"/>
                                         <field name="commentaires"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Présences">
+                                <field name="presence_ids" default_order="date_presence desc">
+                                    <tree editable="bottom">
+                                        <field name="date_presence"/>
+                                        <field name="statut_presence"/>
                                     </tree>
                                 </field>
                             </page>

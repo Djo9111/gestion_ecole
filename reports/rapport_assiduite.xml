@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_assiduite" model="ir.actions.report">
+            <field name="name">Rapport d'Assiduité</field>
+            <field name="model">ecole.etudiant</field>
+            <field name="report_name">ecole_gestion.rapport_assiduite_template</field>
+            <field name="report_file">ecole_gestion.rapport_assiduite</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="binding_model_id" ref="model_ecole_etudiant"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

@@ -4,3 +4,4 @@ access_ecole_professeur_user,ecole.professeur.user,model_ecole_professeur,base.g
 access_ecole_classe_user,ecole.classe.user,model_ecole_classe,base.group_user,1,1,1,1
 access_ecole_matiere_user,ecole.matiere.user,model_ecole_matiere,base.group_user,1,1,1,1
 access_ecole_note_user,ecole.note.user,model_ecole_note,base.group_user,1,1,1,1
+access_ecole_presence_user,ecole.presence.user,model_ecole_presence,base.group_user,1,1,1,1
